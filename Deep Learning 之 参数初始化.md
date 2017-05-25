@@ -63,7 +63,9 @@
 
 ## 1.2 高斯分布（normal initialization）
 
+
 对于高斯分布，需要设置的参数是均值（mean）和标准差（stddev）。一般情况下，均值均设为0，针对方差不同，有以下几种方式：
+
 >1）设置stddev=0.01或者0.001（一个小的常数）带来的问题是，可能过小而导致前向传播时信号丢失
 
 >2）**Xavier Initialization** (m为输入个数，n为输出个数)
@@ -76,6 +78,7 @@
  > 在【2】中推荐设置
  **stddev=sqrt（2/(m+n)**）
     >
+    
 3）**MSRA Initialization** 【3】
 属于xavier的变种，对于Relu 的激活函数而言，kaiming He 推荐使用 
 **stddev=sqrt（2/m）**
@@ -133,6 +136,7 @@
 
 
 **参考文献**
+
 【1】Glorot X, Bordes A, Bengio Y. Deep Sparse Rectifier Neural Networks[C]//Aistats. 2011, 15(106): 275.
 
 【2】X. Glorot and Y. Bengio. Understanding the difficulty of training deepfeedforward neural networks. In International Conference on Artificial Intelligence and Statistics, pages 249–256, 2010.
